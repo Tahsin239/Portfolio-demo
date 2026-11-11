@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .pricing-table {
+      display: grid ;
+      gap:10px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .quantity {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .quantity button {
+      background-color: #f04f3d;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .quantity input {
+      width: 50px;
+      text-align: center;
+      border: 1px solid #ccc;
+      margin: 0 5px;
+    }
+
+    .add-to-cart {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .add-to-cart:hover {
+      background-color: #218838;
+    }
+  </style>
+  <title>Pricing Table</title>
+</head>
+<body>
+  <div class="pricing-table">
+
+
+      <div class="quantity">
+        <button onclick="updateQuantity(-1, 0)">-</button>
+        <input type="text" value="1" id="quantity0" >
+        <button onclick="updateQuantity(1, 0)">+</button>
+      </div>
+
+
+
+
+
+
+
+  <script>
+    function updateQuantity(change, index) {
+      const quantityInput = document.getElementById(`quantity${index}`);
+      let currentValue = parseInt(quantityInput.value);
+      currentValue = Math.max(1, currentValue + change); // Prevents negative or zero
+      quantityInput.value = currentValue;
+    }
+
+    function addToCart(index) {
+      const quantity = document.getElementById(`quantity${index}`).value;
+      alert(`Added ${quantity} item(s) to the cart!`);
+      // Replace this alert with actual cart logic if needed
+    }
+
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+#nav {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+
+}
+
+body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Playwrite IT Moderna", cursive;
+
+
+  justify-content: center;
+  align-items:center;
+  height:100vh
+}
+
+.cat{
+
+  padding-top: 30px;
+  margin-top: :20px ;
+  width:70%
+}
+
+.cat img{
+
+  width:430px;
+  float:left;
+  border:3px, solid, #D6FBFB ;
+  border-radius: : 10px;
+  margin-right:15px;
+  margin-left:10px;
+}
+ .text-box-1 p{
+   font-size:17px;
+
+
+ }
+
+.text-box-1 p:hover{
+  color:#black;
+  background:rgb(189, 225, 190);
+  border: 5px solid rgb(189, 225, 190);
+  overflow: hidden;
+  transition: all 500ms;
+ }
+
+
+ .dog{
+
+   padding-top:10px;
+   margin-top:50px ;
+
+ }
+
+ .dog img{
+
+   width:430px;
+   float:right;
+   border:3px, solid, #D6FBFB ;
+   border-radius: : 10px;
+   margin-right:15px;
+   margin-left:5px;
+ }
+  .text-box-2 p {
+
+    font-size:17px;
+    width:430px;
+    float:right;
+    margin-right:10px;
+
+  }
+
+.text-box-2 h3{
+
+  width:430px;
+  float:right;
+
+}
+
+
+
+
+.text-box-2 p:hover{
+ color:#black;
+ background:#DD4203;
+ border: 5px solid #DD4203;
+ overflow: hidden;
+ transition: all 500ms;
+}
+.bird{
+
+  padding-top: 30px;
+  margin-top: 300px ;
+  width:70%
+}
+
+.bird img{
+
+  width:auto;
+  height: 300px;
+  float:left;
+  border:3px, solid, #D6FBFB ;
+  border-radius:  10px;
+
+  margin-right:15px;
+  margin-left:10px;
+}
+ .text-box-3 p{
+   font-size:17px;
+
+}
+
+.text-box-3 p:hover{
+  color:#black;
+  background:rgb(189, 225, 190);
+  border: 5px solid rgb(189, 225, 190);
+  overflow: hidden;
+  transition: all 500ms;
+ }
+
+.fish{
+
+  padding-top:10px;
+  margin-top:200px;
+
+}
+
+.fish img{
+
+  width:430px;
+  float:right;
+  border:3px, solid, #D6FBFB ;
+  border-radius: : 10px;
+  margin-right:15px;
+  margin-left:5px;
+}
+ .text-box-4 p {
+
+   font-size:17px;
+   width:430px;
+   float:right;
+   margin-right:10px;
+
+ }
+
+.text-box-4 h3{
+
+ width:430px;
+ float:right;
+
+}
+
+
+
+
+.text-box-4 p:hover{
+color:#black;
+background:#DD4203;
+border: 5px solid #DD4203;
+overflow: hidden;
+transition: all 500ms;
+}

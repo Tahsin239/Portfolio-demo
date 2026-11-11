@@ -1,0 +1,104 @@
+h1{
+    color:#F7041A;
+    text-align: center;
+    background: #B8B6B6;
+    margin-bottom:40px;
+
+}
+
+#Messi , #Ronaldo{
+
+
+    margin-bottom:30px;
+}
+
+div.player-info{
+
+    color:#FFFFFF;
+    background:rgb(189, 225, 190);
+    border: 5px solid black;
+    padding:15px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: all 500ms;
+    box-shadow: -15px -15px 15px #151515;
+
+}
+.player-info:hover{
+
+    background-color: rgba(189, 225, 190, .7);
+    color:rgba(1, 1, 1);
+    border-radius: 0 50px 50px 50px;
+
+
+}
+#Messi-VS-Ronaldo-table{
+
+    text-align:center;
+    background: #C0C3C0;
+    padding:10px;
+    padding-left:300px;
+    margin-bottom:40px;
+    width: 500px;
+    height:auto;
+
+
+}
+
+#votting{
+
+    color:#FFFFFF;
+    text-align: left;
+    background:#010101;
+    border: 6px dotted whitesmoke;
+    padding:10px;
+    padding-left: 30px;
+    width:500px;
+    height:auto;
+}
+body{
+
+    background-image:url(../img/football.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+
+    width:250px;
+    height:auto;
+    border-radius:50px 50px 50px 0;
+
+}
+img:hover{
+
+    transform: scale(1.5)
+}
+
+a:link{
+
+    color:red;
+}
+
+a:visited{
+
+    color:rgb(247, 255, 2);
+}
+
+a:hover{
+
+    color:rgb(0, 255, 255)
+}
+
+h1 , h2{
+
+    font-family: arial,sans-serif;
+    font-size:30px;
+}
+p{
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}

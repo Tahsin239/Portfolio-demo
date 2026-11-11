@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Advert Pricing</title>
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+  /* General Styles */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f8f8;
+      min-height: 100vh;
+  }
+
+  /* Quantity Selector */
+       .quantity {
+         display: flex;
+         justify-content: center;
+         margin-top: 10px;
+       }
+
+       .quantity button {
+         background-color: #f04f3d;
+         color: #fff;
+         border: none;
+         padding: 5px 10px;
+         cursor: pointer;
+       }
+
+       .quantity-selector button:hover {
+           background-color: #bbb;
+       }
+
+       .quantity input {
+         width: 50px;
+         text-align: center;
+         border: 1px solid #ccc;
+         margin: 0 5px;
+       }
+  /* Add to cart button code */
+       .add-to-cart {
+                 background-color: #28a745;
+                 color: #fff;
+                 border: none;
+                 padding: 10px 15px;
+                 margin-top: 10px;
+                 cursor: pointer;
+                 width: 100%;
+                 font-size: 16px;
+               }
+
+               .add-to-cart:hover {
+                 background-color: #218838;
+               }
+
+
+    </style>
+
+</head>
+<body>
+
+  <div class=" container">
+    <div class=" row gy-3">
+
+
+
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-header" >
+          <h5 style="color:orange; font-size:17px;"><b>Premium Job Advert</b></h5>
+            </div>
+                  <div class="card-body">
+                    <p class="price">63.9</p>
+                    <p ><b>First time customer discount
+                           Total price</b></p>
+                    <p class="highlight"><font color="red">3 for 63.90 </font><span>(2 for free)</span></p>
+                    <div class="quantity">
+                      <button onclick="updateQuantity(-1, 0)">-</button>
+                        <input type="text" value="1" id="quantity0" >
+
+                      <button onclick="updateQuantity(1, 0)">+</button>
+                    </div>
+                      <button class="add-to-cart" onclick="location.href='##..##' ">Add to Cart</button>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class=" col-sm-6 col-md-3">
+              <div class="card text-center">
+                <div class="card-header">
+                  <h5 style="color:red; font-size:17px;"><b>Pterformance Job Advert</b></h5>
+                  </div>
+                        <div class="card-body">
+                          <p class="description" style="font-size:13px;"><b>(Pay for Performance not for views)</b></p>
+
+                              <p>Set your budget per application
+                              Pay when candidates apply to your job
+                              Adjust your budget anytime
+                              Great for a single user</p>
+
+                          <div class="quantity">
+                            <button onclick="updateQuantity(-1, 1)">-</button>
+                            <input type="text" value="1" id="quantity1" >
+                            <button onclick="updateQuantity(1, 1)">+</button>
+                          </div>
+                            <button class="add-to-cart" onclick="location.href='##...##' ">Add to Cart</button>
+                        </div>
+                      </div>
+                  </div>
+
+
+                  <div class=" col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <div class="card-header">
+                      <h5 style="color:orange; font-size:17px;"><b>CV's</b></h5>
+                        </div>
+                              <div class="card-body">
+                                <p class="description" style="margin-top: 20px;">Select your ...</p>
+                                <p class="offer">Total Price</p>
+                                <p class="price">369/month</p>
+                                <div class="quantity">
+                                  <button onclick="updateQuantity1(-1, 2)">-</button>
+                                    <input type="text" value="100" id="quantity2" aria-label="Quantity" readonly />
+                                    <span class="input-group-text" id="basic-addon2">per month</span>
+                                    <button onclick="updateQuantity1(1, 2)">+</button>
+                                </div>
+                                  <button class="add-to-cart" onclick="location.href='##..##' ">Add to Cart</button>
+                              </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-md-3">
+                          <div class="card text-center">
+                            <div class="card-header">
+                              <h5 style="color:red; font-size:17px;"><b>Pay for Performance</b></h5>
+
+                              </div>
+                                    <div class="card-body">
+
+                                      <p class="description"style="margin-top: 30px;">Select your budget between $1-$15/application and get 150 CVs/week</p>
+                                      <div class="quantity">
+                                        <button onclick="updateQuantity2(-1, 3)">-</button>
+                                          <input type="text" value="1" id="quantity3" aria-label="Quantity" readonly />
+                                          <span class="input-group-text" id="basic-addon2">$/application</span>
+                                          <button onclick="updateQuantity2(1, 3)">+</button>
+                                      </div>
+                                        <button class="add-to-cart" onclick="location.href='##..##' ">Add to Cart</button>
+                                    </div>
+                                  </div>
+                              </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <script>
+    function updateQuantity(change, index) {
+      const quantityInput = document.getElementById(`quantity${index}`);
+      let currentValue = parseInt(quantityInput.value);
+      currentValue = Math.max(1, currentValue + change); // Prevents negative or zero
+      quantityInput.value = currentValue;
+    }
+
+    function addToCart(index) {
+      const quantity = document.getElementById(`quantity${index}`).value;
+      alert(`Added ${quantity} item(s) to the cart!`);
+      // Replace this alert with actual cart logic if needed
+    }
+
+
+        function addToCart(index) {
+          const quantity = document.getElementById(`quantity${index}`).value;
+          alert(`Added ${quantity} item(s) to the cart!`);
+          // Replace this alert with actual cart logic if needed
+        }
+//  minimum value 100 Fixd (cv's)
+        function updateQuantity1(change, index) {
+          const inputField = document.getElementById(`quantity${index}`);
+          let currentValue = parseInt(inputField.value);
+
+          // Update the value only within the range 100 and above
+          let newValue = currentValue + change;
+          if (newValue >= 100) {
+            inputField.value = newValue;
+          } else {
+            inputField.value = 100; // Ensure it doesn't go below 100
+          }
+        }
+
+
+// the range 1 to 15
+        function updateQuantity2(change, index) {
+    const inputField = document.getElementById(`quantity${index}`);
+    let currentValue = parseInt(inputField.value);
+
+    // Update the value only within the range 1 to 15
+    let newValue = currentValue + change;
+    if (newValue >= 1 && newValue <= 15) {
+      inputField.value = newValue;
+    } else if (newValue > 15) {
+      inputField.value = 15; // Ensure it doesn't go above 15
+    }
+  }
+  </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
